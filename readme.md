@@ -6,3 +6,5 @@ It uses a trick where it checks for active radio inputs (hidden via css) as a "l
 This was made with the thought of it being used in a workflow such as handlebars/mustache/etc., where you could have a pre-defined array of images generating the markup (hence the style tag with all the `nth-of-type`s in the markup).
 
 Radio buttons have to come first in the markup, for this to work.
+
+Code is commented with more information.
