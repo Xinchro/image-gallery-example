@@ -1,0 +1,85 @@
+/* General body style */
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #333;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style for main, displayed, image */
+.image {
+  height: 300px;
+  width: 400px;
+  display: inline-block;
+  transition: background 0.5s;
+  background-color: black;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Wrapper for the clickable labels */
+.label-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling of the clickable labels */
+/* Includes hover/active highlight/darkening */
+.image-label {
+  position: relative;
+  background: pink;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-shadow: 
+    -1px -1px 0 white,
+    -1px 1px 0 white,
+    1px -1px 0 white,
+    1px 1px 0 white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center center;
+  background-size: cover;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 100%;
+  margin: 2px;
+  cursor: pointer;
+}
+.image-label:hover:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  background: rgba(255,255,255,0.5);
+  border-radius: 100%;
+}
+.image-label:active:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  border-radius: 100%;
+}
+
+/* Hide the radio buttons */
+.radio-button {
+  display: none;
+}

@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title>Xinchro's CSS Image Gallery Example</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <!-- Hidden radio input "locks" -->
+    <input type="radio" name="image" id="1" class="radio-button" checked>
+    <input type="radio" name="image" id="2" class="radio-button">
+    <input type="radio" name="image" id="3" class="radio-button">
+    <input type="radio" name="image" id="4" class="radio-button">
+    <input type="radio" name="image" id="5" class="radio-button">
+    <input type="radio" name="image" id="6" class="radio-button">
+    <input type="radio" name="image" id="7" class="radio-button">
+
+    <!-- Display image, using non-img tag in order to change background image and have it animate -->
+    <section class="image"></section>
+
+    <!-- Style tag present for generators such as handlebars/mustache/etc. -->
+    <!-- Can be moved to css if needed/wanted (unless above comment) -->
+    <!-- Also included (not required), label is set to the same background as the image it will display -->
+    <style>
+      .image-label:nth-of-type(1), .radio-button:nth-of-type(1):checked ~ .image {
+        background-image: url('https://unsplash.it/200/300');
+      }
+      .image-label:nth-of-type(2), .radio-button:nth-of-type(2):checked ~ .image {
+        background-image: url('https://unsplash.it/300/200');
+      }
+      .image-label:nth-of-type(3), .radio-button:nth-of-type(3):checked ~ .image {
+        background-image: url('https://unsplash.it/800/400');
+      }
+      .image-label:nth-of-type(4), .radio-button:nth-of-type(4):checked ~ .image {
+        background-image: url('https://unsplash.it/1920/1080');
+      }
+      .image-label:nth-of-type(5), .radio-button:nth-of-type(5):checked ~ .image {
+        background-image: url('https://unsplash.it/480/640');
+      }
+      .image-label:nth-of-type(6), .radio-button:nth-of-type(6):checked ~ .image {
+        background-image: url('https://unsplash.it/640/480');
+      }
+      .image-label:nth-of-type(7), .radio-button:nth-of-type(7):checked ~ .image {
+        background-image: url('https://unsplash.it/200/200');
+      }
+    </style>
+
+    <!-- Label wrapper, you click this to change the radio input and thus, the image -->
+    <section class="label-wrapper">
+      <label class="image-label" for="1">1</label>
+      <label class="image-label" for="2">2</label>
+      <label class="image-label" for="3">3</label>
+      <label class="image-label" for="4">4</label>
+      <label class="image-label" for="5">5</label>
+      <label class="image-label" for="6">6</label>
+      <label class="image-label" for="7">7</label>
+    </section>
+  </body>
+</html>
